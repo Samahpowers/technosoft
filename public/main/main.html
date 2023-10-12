@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technosoft Resource Center</title>
+    <link rel="stylesheet" href="main.css">
+    <script defer src="main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header>
+        <div class="alert">Registration successful</div>
+        <ion-icon class="menu" name="ellipsis-vertical"></ion-icon>
+        <h2 class="logo">Technosoft Resource Centre</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Services</a>
+            <a href="#">Contact Us</a>
+            <button class="login-btn login">Login</button>
+            
+        </nav>
+    </header>
+    <div class="wraper ">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form class="user-login" action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-unread"></ion-icon></span>
+                    <input  id="login-email" type="email" required>
+                    <label >Email</label>
+                </div>
+                <div class="input-box">
+                    <span  class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input  id="login-password"type="password" required>
+                    <label >Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label ><input type="checkbox">Remember Me</label>
+                    <a href="#">Forgot Password</a>
+                </div>
+                <button class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't Have An Account?<a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+
+        </div>
+        <div class="form-box register">
+            <h2>Register</h2>
+            <form class="user-registration" action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-unread"></ion-icon></span>
+                    <input  id="email" type="email" required>
+                    <label >Email</label>
+                </div>
+                <div class="input-box">
+                    <ion-icon class="icon" name="person"></ion-icon>
+                    <input  id="phone" type="number" required>
+                    <label >Phone</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input id="password" type="password" required>
+                    <label >Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label ><input type="checkbox">Agree to the terms & conditions</label>
+                  
+                </div>
+                <button class="btn"> submit</button>
+                <div class="login-register">
+                    <p>Have An Account?<a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

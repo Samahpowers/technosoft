@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Josefin+Slab:ital,wght@0,100;0,400;0,500;1,300&family=League+Spartan:wght@300&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*{
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("../general imgs/classroom.webp") no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+   
+}
+
+.alert{
+    display: none;
+    position: absolute;
+    top: 80px;    
+    width: 100%;
+    color: rgba(255, 0, 0, 0.8);
+    font-size: 1.5em;
+    text-align: center;
+    align-items: center;
+}
+
+.btn{
+    color: rgb(255, 253, 253);
+    cursor: pointer;
+   position: relative;
+  height: 50px;
+   top: -5px;
+   left: 5px;
+   font-weight: 900;
+    min-width: 40px;
+}
+
+header{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+   padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    
+}
+
+.logo{
+font-size: 2em;
+color: #0e00d4;
+user-select: none;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: 500;
+    color: #dadada;
+    margin: 20px;
+}
+.navigation a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #dadada;
+    border-radius: 5px;
+    left: 0;
+    bottom: -10px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+ 
+}
+
+.navigation a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.navigation .login-btn{
+    width: 130px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transform-origin: 0.5s;
+}
+.navigation .login-btn:hover{
+    color: #1635e2;
+    background-color: #dadada;
+}
+
+.wraper{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 252, 252, .5);
+    border-radius: 20px;
+   backdrop-filter: blur(15px);
+   /*box-shadow: 0 0 0 1px rgba(0,0,0, 0.5);*/
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+   transform: scale(0);
+  transition: transform .5s ease, height .2s ease;
+}
+.wraper.active-popup{
+    transform: scale(1);
+}
+.wraper.active{
+    height: 520px;
+}
+
+.wraper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+
+
+.wraper .form-box.register{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+
+.wraper.active .form-box.register{
+    transition: .18s ease;
+    transform: translateX(0);
+}
+.wraper .form-box.login{
+    transition: .18s ease;
+   transform: translateX(0);
+}
+.wraper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.form-box h2{
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid #c8dae7;
+    margin: 30px 0;
+}
+
+.input-box label{
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+.wraper .input-box input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #dadada;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.8em;
+    line-height: 57px;
+    color: #ffffff;
+}
+
+.remember-forgot{
+    font-size: .9em;
+    color: #dadada;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forgot label input{
+    accent-color: #162938;
+    margin-right: 3px;
+}
+.remember-forgot a{
+    color: #dadada;
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+   
+    text-decoration: underline;
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    background-color: #dadada;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    color: black;
+    font-weight: 600;
+}
+.login-register{
+    font-size: 1em;
+    color: #dadada;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+  
+   
+}
+.login-register p a{
+    font-weight: 500;
+    margin-left: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+.login-register p a:hover{
+  text-decoration: underline;
+}
+.wraper .icon-close{
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 45px;
+    width: 45px;
+    background-color: #111111;
+    align-items: center;
+    justify-content: center;
+    display: flex;    
+    font-size: 2em;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/*media screen and screen sizes*/
+
+/*Desktop*/
+
+@media screen and (min-width: 1024px) {
+  .menu{
+    display: none;
+  }
+}
+
+/*Tablet*/
+
+@media screen and (min-width: 767px) and (max-width: 1023) {
+    .navigation a{
+        margin: 8px;
+    }
+    
+}
+
+/*smart phone*/
+
+@media screen and  (max-width: 767px) {
+    header{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+   
+    .navigation a{
+        display: none;
+    }
+    }
+    .wraper{
+        top: 50px;
+        color: #111111;
+    }
+
+    .logout{
+        display: none;
+    }
+
+
+
+
+/*Common screen sizes
+Mobile: 360 x 640
+Mobile: 375 x 667
+Mobile: 360 x 720
+iPhone X: 375 x 812
+Pixel 2: 411 x 731
+Tablet: 768 x 1024
+Laptop: 1366 x 768
+High-res laptop or desktop: 1920 x 1080*/
